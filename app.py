@@ -65,35 +65,3 @@ def process2():
 if __name__ == "__main__":
     app.run(debug=True)
 
-
-# myclient = pymongo.MongoClient("mongodb://localhost:27017/")
-# mydb = myclient["MINI_PROJECT"]
-
-# mycol_1=mydb["item"]
-# mycol_2=mydb["customer_detail"]
-# mycol_3=mydb["Billing"]
-# mycol_4=mydb["Shipping"]
-
-# num_1=int(input("Enter number of items:"))
-
-# for i in range(num_1):
-#     name=input("ENter name of item")
-#     id=int(input("Enter item_id of "+name+" :"))
-#     iq=int(input("Enter initial_quantity"))
-#     loc=input("Enter location:")
-#     price=int(input("Enter price:"))
-
-#     mycol_1.insert_one({"item_name":name,"item_id":id,"Initial_Quantity":iq,
-#                         "Current_Quantity":iq,"Location":loc,"Price":price})
-
-
-# num_2=int(input("Enter number of shipped items:"))
-
-# for i in range(num_2):
-#     name=input("ENter name of item")
-#     id=int(input("Enter item_id of "+name+" :"))
-#     s_l=int(input("Enter shipped location"))
-#     date=input("Enter shipping date as dd/mm/yyyy format:")
-
-#     mycol_4.insert_one({"item_name":name,"item_id":id,"Shipped location":s_l,
-#                         "Date":date})
