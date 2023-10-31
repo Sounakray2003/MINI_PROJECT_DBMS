@@ -61,6 +61,52 @@ def process2():
     )
     return "Data inserted successfully"
 
+@app.route("/index3")
+def index3():
+    return render_template("index3.html")
+
+
+@app.route("/process3", methods=["GET", "POST"])
+def process3():
+    user_input1 = request.form["user_input10"]
+    user_input2 = request.form["user_input11"]
+    user_input3 = request.form["user_input12"]
+    user_input4 = request.form["user_input13"]
+
+    mycol_2.insert_one(
+        {
+            "Customer_name": user_input1,
+            "Order_id": user_input2,
+            "item_ordered": user_input3,
+            "customer_location": user_input4,
+        }
+    )
+    return "Data inserted successfully"
+
+@app.route("/index4")
+def index4():
+    return render_template("index4.html")
+
+
+@app.route("/process4", methods=["GET", "POST"])
+def process4():
+    user_input1 = request.form["user_input14"]
+    user_input2 = request.form["user_input15"]
+    user_input3 = request.form["user_input16"]
+    user_input4 = request.form["user_input17"]
+    user_input5 = request.form["user_input18"]
+    user_input6 = request.form["user_input19"]
+    mycol_3.insert_one(
+        {
+            "Order_date": user_input1,
+            "item_id": user_input2,
+            "Order_key": user_input3,
+            "Quatity": user_input4,
+            "item_key": user_input5,
+            "Amount": user_input6,
+        }
+    )
+    return "Data inserted successfully"
 
 if __name__ == "__main__":
     app.run(debug=True)
